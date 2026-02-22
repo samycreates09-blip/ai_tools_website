@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Atlas</title>
+  <meta name="description" content="Explore popular AI tools, their use cases, pricing, specs, and feature comparisons." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">AI Tools Atlas</div>
+      <a class="toplink" href="#tools">Browse Tools</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">2026 guide to practical AI tools</p>
+      <h1>Find the right AI tool for your workflow</h1>
+      <p class="hero-copy">
+        Compare tools across writing, coding, design, video, research, productivity, and automation.
+        Get quick details on use cases, pricing, model access, integrations, and standout capabilities.
+      </p>
+      <p class="hero-copy">
+        Need broader discovery? Explore directories:
+        <a href="https://www.futurepedia.io" target="_blank" rel="noopener noreferrer">Futurepedia</a>,
+        <a href="https://theresanaiforthat.com" target="_blank" rel="noopener noreferrer">There's An AI For That</a>,
+        <a href="https://www.toolify.ai" target="_blank" rel="noopener noreferrer">Toolify</a>.
+      </p>
+
+      <div class="controls" id="tools">
+        <label class="control-label" for="search">Search by name, use case, or feature</label>
+        <input id="search" type="search" placeholder="Try: coding, video editing, API, free tier..." />
+
+        <div class="filter-row">
+          <div>
+            <label class="control-label" for="category">Category</label>
+            <select id="category">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+          <div>
+            <label class="control-label" for="pricing">Pricing</label>
+            <select id="pricing">
+              <option value="all">Any pricing model</option>
+              <option value="free">Has free plan</option>
+              <option value="paid">Paid / subscription</option>
+              <option value="enterprise">Enterprise focus</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-head">
+        <h2>Tool Directory</h2>
+        <p><span id="resultCount">0</span> tools listed</p>
+      </div>
+      <div id="toolGrid" class="tool-grid"></div>
+    </section>
+  </main>
+
+  <template id="toolTemplate">
+    <article class="tool-card">
+      <div class="card-top">
+        <div>
+          <p class="category"></p>
+          <h3 class="name"></h3>
+        </div>
+        <span class="badge"></span>
+      </div>
+
+      <p class="summary"></p>
+
+      <div class="meta-row">
+        <div>
+          <p class="meta-label">Pricing</p>
+          <p class="pricing"></p>
+        </div>
+        <div>
+          <p class="meta-label">Best for</p>
+          <p class="best-for"></p>
+        </div>
+      </div>
+
+      <div class="chip-group use-cases"></div>
+
+      <div class="details-grid">
+        <div>
+          <p class="meta-label">Core Specs</p>
+          <ul class="specs"></ul>
+        </div>
+        <div>
+          <p class="meta-label">Key Features</p>
+          <ul class="features"></ul>
+        </div>
+      </div>
+
+      <a class="visit-link" target="_blank" rel="noopener noreferrer">Visit Tool</a>
+    </article>
+  </template>
+
+  <footer>
+    <p>
+      The market changes frequently. This site now includes a broad multi-category tool list plus directory links for ongoing discovery.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

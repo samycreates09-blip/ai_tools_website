@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">AI Tools Atlas Project Overview</title>
+  <desc id="desc">Architecture and project file structure overview for the Flask-based AI Tools Atlas website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f3a" />
+      <stop offset="100%" stop-color="#123c64" />
+    </linearGradient>
+    <style>
+      .title { font: 700 42px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 400 22px 'Segoe UI', Arial, sans-serif; fill: #dbeafe; }
+      .box-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .box-text { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #1e293b; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #e2e8f0; }
+      .small { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #e2e8f0; }
+      .arrow { stroke: #f8fafc; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f8fafc" />
+    </marker>
+  </defs>
+
+  <rect width="1400" height="860" fill="url(#bg)" rx="24" />
+
+  <text x="70" y="90" class="title">AI Tools Atlas</text>
+  <text x="70" y="130" class="subtitle">Flask + Static Frontend Project Overview</text>
+
+  <rect x="70" y="190" width="360" height="180" rx="16" fill="#dbeafe" />
+  <text x="95" y="235" class="box-title">Browser Client</text>
+  <text x="95" y="270" class="box-text">index.html</text>
+  <text x="95" y="300" class="box-text">styles.css</text>
+  <text x="95" y="330" class="box-text">script.js (tool data + filters)</text>
+
+  <rect x="520" y="190" width="360" height="180" rx="16" fill="#bfdbfe" />
+  <text x="545" y="235" class="box-title">Flask Server</text>
+  <text x="545" y="270" class="box-text">app.py</text>
+  <text x="545" y="300" class="box-text">Route: /samycreatesai/</text>
+  <text x="545" y="330" class="box-text">Serves static files</text>
+
+  <rect x="970" y="190" width="360" height="180" rx="16" fill="#93c5fd" />
+  <text x="995" y="235" class="box-title">Project Metadata</text>
+  <text x="995" y="270" class="box-text">requirements.txt (Flask)</text>
+  <text x="995" y="300" class="box-text">README.md</text>
+  <text x="995" y="330" class="box-text">docs/overview.svg</text>
+
+  <path d="M430 280 L520 280" class="arrow"/>
+  <path d="M880 280 L970 280" class="arrow"/>
+
+  <text x="70" y="460" class="label">Runtime Flow</text>
+  <text x="70" y="500" class="small">1. User opens http://127.0.0.1:8000/samycreatesai/</text>
+  <text x="70" y="530" class="small">2. Flask returns index.html + frontend assets</text>
+  <text x="70" y="560" class="small">3. JavaScript renders searchable/filterable AI tools catalog</text>
+
+  <text x="70" y="640" class="label">Primary Files</text>
+  <text x="70" y="680" class="small">app.py • index.html • styles.css • script.js • requirements.txt</text>
+</svg>
